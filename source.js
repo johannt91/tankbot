@@ -1,10 +1,10 @@
-export const admins = {
+const admins = {
   chris: "U04DDM4LQAD",
   sammy: "U04SKSY6K1C",
   johann: "U04D05DDPJ6",
 };
 
-export const channels = {
+const channels = {
   intro: "C052KD3ELTH",
   networking: "C057LAEN8DP",
   social: "C04UA2H8ARG",
@@ -45,4 +45,4 @@ And of course, if you don't see an appropriate place to post, you can always jus
 Thanks for reading, and we hope you have a good swim :fish:
 `;
 
-export {greeting}
+module.exports = {greeting}

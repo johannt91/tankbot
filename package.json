@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "tankbot.js",
-  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -14,5 +13,9 @@
     "@slack/bolt": "^3.13.1",
     "@slack/web-api": "^6.8.1",
     "dotenv": "^16.0.3"
+  },
+  "devDependencies": {
+    "serverless-dotenv-plugin": "^6.0.0",
+    "serverless-offline": "^12.0.4"
   }
 }
