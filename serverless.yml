@@ -12,9 +12,12 @@ provider:
   name: aws
   runtime: nodejs12.x
   region: us-east-1
+  role: arn:aws:iam::562692320777:role/slackbot
+  deploymentMethod: direct
   environment:
     SLACK_SIGNING_SECRET: ${env:SLACK_SIGNING_SECRET}
     SLACK_BOT_TOKEN: ${env:SLACK_BOT_TOKEN}
+    SLACK_APP_TOKEN: ${env:SLACK_APP_TOKEN}
 
 functions:
   slack:
@@ -22,9 +25,14 @@ functions:
     events:
       - http:
          path: slack/events
-         method: get
+         method: post
          cors: true
          private: true
 
+package:
+  individually: true
+  exclude:
+    - node_modules/**
+    - package-lock.json
 
 
